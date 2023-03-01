@@ -1,0 +1,44 @@
+{
+  "tests": [
+    {
+      "name": "Data Structures Intro Test",
+      "setup": "",
+      "run": "./gradlew datastructures-intro-test",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": null
+    },
+    {
+      "name": "Data Structures Practicing With Objects Main Test",
+      "setup": "",
+      "run": "./gradlew datastructures-practicingwithobjects-applicaiton-test",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": null
+    },
+    {
+      "name": "Data Structures Practicing With Objects EntryPass Test",
+      "setup": "",
+      "run": "./gradlew datastructures-practicingwithobjects-entrypass-test",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": null
+    },
+    {
+      "name": "Unit Testing Main Test",
+      "setup": "",
+      "run": "./gradlew unittesting-practicingunittesting-test",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": null
+    }
+  ]
+}
