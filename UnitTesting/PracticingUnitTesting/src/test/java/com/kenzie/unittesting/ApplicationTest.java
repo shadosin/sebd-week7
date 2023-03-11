@@ -40,11 +40,13 @@ public class ApplicationTest extends TestCase {
     @Test
     public void testAddGreeting(){
         // ARRANGE
+        String testGreeting = "Dave";
 
         // ACT
-
+        String actualString = Application.addGreeting(testGreeting);
+        String expectedStringResult = "Hello " + testGreeting + "!";
         // ASSERT
-
+        assertEquals(expectedStringResult, actualString);
     }
 
     // Write a test method to check that the addNumbers method works correctly
@@ -52,11 +54,13 @@ public class ApplicationTest extends TestCase {
     @Test
     public void testAddNumbers(){
         // ARRANGE
-
+        int test1 = 2;
+        int test2 = 2;
         // ACT
-
+        int actualResult = Application.addNumbers(test1, test2);
+        int expectedResult = 4;
         // ASSERT
-
+    assertEquals(actualResult, expectedResult);
     }
 
     // Write a test method to check that the countCharacter method
@@ -65,10 +69,13 @@ public class ApplicationTest extends TestCase {
     @Test
     public void testCountCharacterMatchLetters() {
         // ARRANGE
-
+        char test = 'a';
+        String testA = "I really like bananas";
         // ACT
-
+        int actualResult = Application.countCharacter(test, testA);
+        int expectedResult = 4;
         // ASSERT
+        assertEquals(actualResult, expectedResult);
 
     }
 
@@ -77,10 +84,13 @@ public class ApplicationTest extends TestCase {
     @Test
     public void testCountCharacterMatchPunctuation() {
         // ARRANGE
-
+        char test = '!';
+        String testA = "I! reAll!!y, ?!? lik!!e banAnas!";
         // ACT
-
+        int actualResult = Application.countCharacter(test, testA);
+        int expectedResult = 7;
         // ASSERT
+        assertEquals(actualResult, expectedResult);
 
     }
 
@@ -89,10 +99,13 @@ public class ApplicationTest extends TestCase {
     @Test
     public void testCountCharactersEmptyString() {
         // ARRANGE
-
+        char test = 'W';
+        String testA = "";
         // ACT
-
+        int actualResult = Application.countCharacter(test, testA);
+        int expectedResult = 0;
         // ASSERT
+        assertEquals(actualResult, expectedResult);
 
     }
 
@@ -101,10 +114,14 @@ public class ApplicationTest extends TestCase {
     @Test
     public void testCountCharacterMatchAnyCase() {
         // ARRANGE
-
+        char test = 'a';
+        String testA = "I reAlly like banAnas";
         // ACT
-
+        int actualResult = Application.countCharacter(test, testA);
+        int expectedResult = 4;
         // ASSERT
+        assertEquals(actualResult, expectedResult);
+
 
     }
 

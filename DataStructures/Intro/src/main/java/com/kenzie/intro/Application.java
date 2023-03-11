@@ -1,16 +1,29 @@
 package com.kenzie.intro;
 
+import java.util.HashMap;
+
 public class Application {
     public static AssignmentTracker createHomeworkAssignmentTracker(){
         // TODO: fill in the method
-
-        // Change to return AssignmentTracker when complete
-        return null;
+        AssignmentTracker homeworkTracker = new AssignmentTracker("Homework 1", 100);
+        homeworkTracker.addGrade("Lisa", 100);
+        homeworkTracker.addGrade("Bart", 80);
+        homeworkTracker.addGrade("Maggie", 0);
+        homeworkTracker.addGrade("Homer", 75);
+       return homeworkTracker;
     }
 
-    public static AssignmentTracker changeGrade(AssignmentTracker assignmentTracker, String name, int points){
+    public static AssignmentTracker changeGrade(AssignmentTracker homeworkTracker, String name, int points) {
         // TODO: fill in the method
-        return null;
+        int currentGrade = homeworkTracker.checkGrade(name);
+        if (currentGrade > 0 && currentGrade + points <= 100) {
+            homeworkTracker.updateGrade(name, currentGrade + points);
+        }else if(currentGrade > 0 && currentGrade + points >= 100){
+            homeworkTracker.updateGrade(name, 100);
+        }
+
+
+        return homeworkTracker;
     }
 
     public static void main(String[] args) {

@@ -13,6 +13,7 @@ public class Dice {
 
     //override equals() here
 
+
     @Override
     public boolean equals(Object other) {
         // Check if the addresses are the same
@@ -29,7 +30,7 @@ public class Dice {
         // Compare all required fields
 
         //For dice, we are checking that the order can be switched
-        return this.die1 + this.die2 + this.die3 == that.die1 + that.die2 + that.die3;
+        return (this.die1 + this.die2 + this.die3) == (that.die1 + that.die2 + that.die3);
     }
 
 }

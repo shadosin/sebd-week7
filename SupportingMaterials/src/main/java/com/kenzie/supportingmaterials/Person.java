@@ -3,7 +3,7 @@ package com.kenzie.supportingmaterials;
 import java.util.HashMap;
 import java.util.Objects;
 
-class Person {
+class     Person {
     private String firstName;
     private String lastName;
     private int age;

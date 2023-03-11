@@ -28,17 +28,29 @@ public class CalculatorTest {
 
     @Test
     void testSubtraction() {
+        Calculator calculator = new Calculator();
+        int expectedResult = calculator.subtract(9, 3);
+        int actualResult = 6;
 
+        assertEquals(expectedResult, actualResult);
     }
 
     @Test
     void testMultiplication() {
+        Calculator calculator = new Calculator();
+        int actualResult = calculator.multiply(6, 3);
+        int expectedResult = 18;
 
+        assertEquals(expectedResult, actualResult);
     }
 
     @Test
     void testDivision() {
+        Calculator calculator = new Calculator();
+        int actualResult = calculator.divide(144, 12);
+        int expectedResult = 12;
 
+        assertEquals(expectedResult, actualResult);
     }
 
 }

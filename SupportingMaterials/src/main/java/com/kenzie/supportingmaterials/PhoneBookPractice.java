@@ -26,6 +26,32 @@ public class PhoneBookPractice {
         for (String contactName : phoneBook.keySet()){
             System.out.println(contactName + " => " + phoneBook.get(contactName));
         }
-    }
+        practicingMethods(phoneBook);
 
+    }
+    public static void practicingMethods(HashMap<String, String> phoneBook){
+        System.out.println(phoneBook.size());
+        if(phoneBook.containsKey("Maria")){
+            System.out.println("Yes!");
+        }
+        phoneBook.remove("Oscar");
+        phoneBook.replace("Burt", "+1-202-867-5309");
+        System.out.println(phoneBook.getOrDefault("Ryan Reynolds", "Sorry"));
+        System.out.println(phoneBook.size());
+        System.out.println(phoneBook.entrySet());
+    }
+    public static String lookUpAreaCode(String phoneNumber){
+        String areaCode = phoneNumber.replaceAll("^\\d.]", "").substring(1,4);
+
+        HashMap<String, String> areaCodeMap = new HashMap<>();
+
+        areaCodeMap.put("208", "Idaho");
+        areaCodeMap.put("530", "California");
+        areaCodeMap.put("971", "Oregon");
+        System.out.println(areaCodeMap.entrySet());
+
+        String value = areaCodeMap.getOrDefault("907", "Not found");
+        System.out.println(value);
+        return value;
+    }
 }
