@@ -1,5 +1,6 @@
 package com.kenzie.practicingwithobjects;
 
+import java.util.Map;
 import java.util.Objects;
 
 public class EntryPass {
@@ -57,7 +58,10 @@ public class EntryPass {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof EntryPass entryPass)) return false;
+        if (!(o instanceof EntryPass)) return false;
+
+        EntryPass entryPass = (EntryPass) o;
+
         return getId().equalsIgnoreCase(entryPass.getId()) && getAccessLevel().equalsIgnoreCase(entryPass.getAccessLevel());
     }
 
